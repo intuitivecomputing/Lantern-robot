@@ -1,0 +1,89 @@
+/*
+ * Direction G ("Object × Monograph"), shared with the M site
+ * (intuitivecomputing/M-robot, apps/M-website/src/styles/theme.css): a grey
+ * page of white cells on 1px hairline grids. Newsreader for reading text,
+ * Geist Mono for lowercase labels, Doto for large numerals only, and one link
+ * blue as the sole accent. Colour beyond that comes from the robot's shells.
+ *
+ * Everything above "Lantern" below is identical to M's tokens; keep it that
+ * way until the collective's tokens live in one shared package.
+ */
+@theme {
+    --font-serif: "Newsreader", Georgia, serif;
+    --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --font-dot: "Doto", "Geist Mono", monospace;
+
+    --color-ink: #121114;
+    --color-toned: #333336;
+    --color-label: #5E5E62;
+    --color-chrome: #F1F2F2;
+    --color-sheet: #FFFFFF;
+    --color-hairline: #D9DADA;
+    --color-rule: #ECEDED;
+    --color-link: #2236C9;
+    --color-link-hover: #16248A;
+
+    --color-on-dark: #F1F2F2;
+    --color-on-dark-label: #A3A3A8;
+    --color-dark-rule: #2E2D31;
+
+    --color-shell-grey: #E4E6E6;
+    --color-shell-red: #F7DCD6;
+    --color-shell-pink: #F3DDE7;
+
+    /* Lantern: backdrops sampled from its knit and paper exteriors. */
+    --color-shell-yellow: #F4EBC4;
+    --color-shell-butter: #FAF4DC;
+}
+
+@layer base {
+    body {
+        margin: 0;
+        background: var(--color-chrome);
+        color: var(--color-ink);
+        font-family: var(--font-serif);
+        font-size: 19px;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    a {
+        color: var(--color-link);
+    }
+
+    a:hover {
+        color: var(--color-link-hover);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-link);
+        outline-offset: 2px;
+    }
+
+    ::selection {
+        background: var(--color-shell-yellow);
+    }
+}
+
+/*
+ * Lantern's one motion: a slow inhale and exhale, like the shell expanding
+ * and contracting. The image scales from its base, as the robot does.
+ */
+@keyframes breathe {
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+    45% {
+        transform: scale(1.045, 0.965);
+    }
+}
+
+@utility animate-breathe {
+    transform-origin: 50% 100%;
+    animation: breathe 5.2s ease-in-out infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+        animation: none;
+    }
+}
