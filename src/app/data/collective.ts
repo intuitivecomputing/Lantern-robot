@@ -1,3 +1,6 @@
+// Shared with the M site (intuitivecomputing/M-robot, apps/M-website/src/app/data/collective.ts);
+// only CURRENT_ROBOT_ID differs. Change both together.
+
 // The open robot collective: every robot's site names its siblings, like
 // volumes in one series. Add a robot here (and on each sibling's site) to
 // list it everywhere.

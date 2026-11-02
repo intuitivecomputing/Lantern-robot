@@ -1,3 +1,6 @@
+// Shared with the M site (intuitivecomputing/M-robot, apps/M-website/src/app/components/CollectiveBar.tsx).
+// Change both together until the collective's components live in one shared package.
+
 import { COLLECTIVE_NAME, CURRENT_ROBOT_ID, ROBOTS } from "../data/collective";
 import { Container } from "./layout";
 
