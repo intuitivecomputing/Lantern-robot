@@ -2,8 +2,8 @@
 // only CURRENT_ROBOT_ID differs. Change both together.
 
 // The open robot collective: every robot's site names its siblings, like
-// volumes in one series. Add a robot here (and on each sibling's site) to
-// list it everywhere.
+// volumes in one series. Add a robot here, on each sibling's site, and on the
+// collective's site (intuitivecomputing/open-robot-collective) to list it everywhere.
 
 export interface CollectiveRobot {
     id: string;
@@ -12,6 +12,7 @@ export interface CollectiveRobot {
 }
 
 export const COLLECTIVE_NAME = "open robot collective";
+export const COLLECTIVE_URL = "https://openrobotcollective.com/";
 
 export const ROBOTS: CollectiveRobot[] = [
     { id: "m", name: "m", url: "https://intuitivecomputing.github.io/M-robot/" },
