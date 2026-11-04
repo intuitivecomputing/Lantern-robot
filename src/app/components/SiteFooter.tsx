@@ -29,10 +29,8 @@ export function SiteFooter() {
         <footer className="mt-18 bg-ink text-on-dark-label">
             <Container className="flex flex-wrap justify-between gap-x-12 gap-y-6 pt-10 pb-12">
                 <div>
-                    <p className="text-lg text-on-dark italic">Colophon</p>
-                    <p className="mt-1.5 font-mono text-xs leading-relaxed lowercase">
-                        Set in Newsreader, Geist Mono, and Doto.
-                        <br />© {YEAR} {COPYRIGHT_HOLDER}
+                    <p className="font-mono text-xs leading-relaxed lowercase">
+                        © {YEAR} {COPYRIGHT_HOLDER}
                     </p>
                     {ACKNOWLEDGMENTS && <p className="mt-3 max-w-xl text-sm leading-relaxed">{ACKNOWLEDGMENTS}</p>}
                 </div>

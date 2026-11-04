@@ -125,11 +125,14 @@ export function HomePage({ onPageChange }: HomePageProps) {
                         <p className="mt-12 text-xl">
                             {AUTHORS.map((author, i) => (
                                 <span key={author.name}>
-                                    {author.name}
-                                    <sup>
-                                        {author.affiliations.join(",")}
-                                        {author.equalContribution && "*"}
-                                    </sup>
+                                    {/* Keep each name on one line ("Chien-Ming" would break at the hyphen). */}
+                                    <span className="whitespace-nowrap">
+                                        {author.name}
+                                        <sup>
+                                            {author.affiliations.join(",")}
+                                            {author.equalContribution && "*"}
+                                        </sup>
+                                    </span>
                                     {i < AUTHORS.length - 1 && ", "}
                                 </span>
                             ))}
